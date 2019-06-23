@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <View
+        android:id="@+id/view_start_validation_blank_circle"
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/start_validation_start_trip_yellow_blank_circle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintlayout_start_validation_btn"
+        android:layout_width="197dp"
+        android:layout_height="197dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/start_validation_start_trip_yellow_circle"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical|center_horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/view_start_validation_blank_circle"
+        app:layout_constraintEnd_toEndOf="@+id/view_start_validation_blank_circle"
+        app:layout_constraintStart_toStartOf="@+id/view_start_validation_blank_circle"
+        app:layout_constraintTop_toTopOf="@+id/view_start_validation_blank_circle">
+
+        <TextView
+            android:id="@+id/tv_start_validation_validate_shipments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/dark_yellow"
+            android:fontFamily="@font/cairo_semibold"
+            android:text="@string/tv_startvalidation_validate_shipments"
+            android:textColor="@color/black"
+            android:textSize="9sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_start_validation_start"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:id="@+id/tv_start_validation_start"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_above="@+id/tv_start_validation_validate_shipments"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="34dp"
+            android:fontFamily="@font/cairo_bold"
+            android:text="@string/tv_startvalidation_start"
+            android:textColor="@color/black"
+            android:textSize="47sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>
