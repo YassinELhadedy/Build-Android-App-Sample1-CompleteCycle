@@ -45,7 +45,7 @@ https://www.vagrantup.com/intro/index.html
 
 
 # User Acceptance Test Cases 
-![alt text](https://photos.app.goo.gl/FbAhpPJLqsHX7ZkUA)
+![AcceptanceTestCase1](https://user-images.githubusercontent.com/15185524/60012311-ed6d0700-967b-11e9-8f30-2f4c250017c7.PNG)
 
 ![alt text](https://lh3.googleusercontent.com/CzIhfiWZh1IVU6SoLMBHhHWe9S5ZtKcIkHkHDK8JiLiCFlcWEG1VG7eb9eyJymiohfnINFvOYq0AtypknwzGGa5eQJNaYj0AzJxbycxWsEGYKwSdG0ML-Ibc4EXRqvhy75H1xsDcHzkm88AnAhMa8OKDgXd31Mj7BjQxmOVaxo64LcCNVloxcZB8JJ-jCoAuPZRym-ndBnwSo40RMWeaid2LAqbHWmIiSi7Zft206rkyM5rPJFuqi7bZO3p-zL5TBMR43ba7JswaPWpyxXT3GRytPyB-ZFWUd25RWhTDZ80m8knoSYE3MkssXdO7zY7IlHmVa1U4o50mtoSiM-faah0IaS1adaHBSVEAR9wdUIc3l3OoX4_6DyWSBTv0JZgWWVE3l_UopsOKUIV4qjUTOQZkj9RodkB_T_BEGgDagjJKr5I-IxWFxNimoJmGzCO9Emj_oSzEbTkNqnm851Pqr-Nr5lv6kQWC0Ocw5ARFFI8EJI8QPYxGB_Xu-Hi_Ueo-y0PvuATIiJnNnbraxYAEbCaqogGzCuqn5Xe1eKWobu38qO9T2N-otBIxJUGM0w_WJDk-8at2yqvbW_VcgouwLu6euun6k22AQVFqzGlR79XxnpbqXJ5SLru5dlWGzKmJjcm97Ke8QcTuaov2oqS7msn5Bkv3iw=w1611-h442-no)
 
