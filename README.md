@@ -59,7 +59,8 @@ https://www.vagrantup.com/intro/index.html
 ![ModelDiagram](https://user-images.githubusercontent.com/15185524/60013139-feb71300-967d-11e9-959c-2689ce276207.png)
 
 
-![alt text](https://lh3.googleusercontent.com/w_yUHZzc3TUhpVlxegy0l4WyoTxn1cSWVpoPHhzcBImE9b65cz6_2YGdFLqHVUQ_OWyb7MJkq-XmfFsOyMqzVFXoW7sdBkmDTQq9tFB4ENF7Z7WwOGlHst_YjcZS6JNL6QsnvHF5KJat2Tw76fNgyBNDylh2iGWG8mGIAzQg6kXFe_JdS-N3B-txGgi_jn-8VjbeQ3283tJbAEg6zREyHMK7Kdx-mxkhX3XXwoB2hvarR2lFe2Q9utBpEbLD8-krVor1NamGoCCLK2I_BhwR8G4z1Uq2yge_PLUvxBP732adg4jBRVUIzyacdpEfoms3yyfv4bnwozk7Z_mwaB2GqxO3dsp6KU3XArYUZgWuFjDbr2tPItn5MQircQAiBXSUF3Ysv6gak1r77twK1ThpHuzms2B8sjB9pY36M-3-8eTIb56UtJaaN5ERtN4epje5ynWqfZvKecovGh-DxYcbxduwVnMYrjXBWzITilaEvKEAaqzGQ3R4lCOXiVj7U_ANX_NvSiQ1sPIR_SXIBHfggWbG5gMI97e6qtJCNAjvYknyxh5R_6x7T9KMuOZ8sVK4_mIwjTGCNVFMpl3Z7ZZBPvsmNyQ8-IXxbah_1Yws9W-2FK0bP6kKg5HKA7n8PHChUnGY7XCxmRpDOAaaBhBvROTP0W3JUw=w1579-h685-no)
+![StreetGlideRepository](https://user-images.githubusercontent.com/15185524/60013243-42aa1800-967e-11e9-8f32-6774384c7d70.png)
+
 
 ![loginSeq](https://user-images.githubusercontent.com/15185524/60013055-c7e0fd00-967d-11e9-99bb-8876bc9bca7d.png)
 
