@@ -82,7 +82,7 @@ https://www.vagrantup.com/intro/index.html
 
 
 # Git Fow 
-![alt text](https://lh3.googleusercontent.com/2eumFAJhRCUb_2P_GDI3jItR7A1S_R9MSTkNlgaP4zfsKolH902t1Di0II4FlWzQxanx_-o76-Ka8EF4lgfwjLCjek-gY0e-AWpP_ebNdK2Zvur1kcBEEggU4VZfOo08ID4IvF1H9m_PvDigK2hNDCfSFW6tzvthE8bDsaOGCmDjNI3TYTJKje-ulr1qw8aguVW4jc7MGKDwMi3youoYdG4Oo7bCzqWTfJqChwrOKzPMGD-k71I79kVhT4yyhH_wP4sqFN7Q6pBOCCFx2Hny_cCkVhnXstCbg0J29xCYaVyg5B_ggXYjC-8w84AZrQ0N3h_CGlieP_MLxc8sJYP6QN0ncHN00JqFK5J9f4mODeo7qojCUjn95RMS6jvIw02A0sKl6PGiRz2aAf7YgWec30pnmbgliTieQprQ9KCX81tDWjRi1xqD4btx8qHcAxsPbvQx0tokHmcdCDCJ2slPovRciZoUDJE53HV8HQwn3LJoOg2KJSGsGr8n9qjXLY6cmVJNwgAsWGVSVeEipiMkdckz0gOvlDcLz3i7thLalJWNziR1wNA245Ypd13JA4av2ZViD6RgXXTMHcWu2FAsl2pD-9ZdJgdahayp5tdj9O8839UDf2O6KQhN3mhG7hQZpK6wbsKJ3qzYuXnb3g_tBR_kr6Oo_w=w358-h220-no)
+![Gitflow](https://user-images.githubusercontent.com/15185524/60012960-8b150600-967d-11e9-9b41-fe7f1c51fe9a.png)
 
 # CI/CD FLOW 
 ![CICD](https://user-images.githubusercontent.com/15185524/60012620-b77c5280-967c-11e9-8a3f-721e7265f82b.png)
