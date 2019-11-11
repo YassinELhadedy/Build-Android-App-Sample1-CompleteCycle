@@ -1,5 +1,6 @@
 package com.transporter.streetglide.ui.runnerlogin
 
+import android.annotation.SuppressLint
 import com.transporter.streetglide.models.Pagination
 import com.transporter.streetglide.models.exception.SheetNotFoundException
 import com.transporter.streetglide.models.services.GetRunnerIdService
@@ -12,6 +13,7 @@ class LoginPresenter(private val loginService: LoginService, private val request
 
     private lateinit var view: LoginContract.View
 
+    @SuppressLint("CheckResult")
     override fun login(username: String, password: String, pagination: Pagination) {
         view.showLoading()
         loginService.login(username, password).flatMap { signedToken ->

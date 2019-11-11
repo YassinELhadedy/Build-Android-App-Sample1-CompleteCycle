@@ -11,25 +11,18 @@ import android.widget.Button
 import android.widget.EditText
 import com.ontbee.legacyforks.cn.pedant.SweetAlert.SweetAlertDialog
 import com.transporter.streetglide.R
-import com.transporter.streetglide.infrastructure.SheetDiskRepository
-import com.transporter.streetglide.infrastructure.SheetSuperGlideRepository
-import com.transporter.streetglide.infrastructure.TokenSuperGlideRepository
-import com.transporter.streetglide.infrastructure.UserSuperGlideRepository
 import com.transporter.streetglide.models.*
-import com.transporter.streetglide.models.services.GetRunnerIdService
-import com.transporter.streetglide.models.services.LoginService
-import com.transporter.streetglide.models.services.RequestSheetService
-import com.transporter.streetglide.ui.app.StreetglideApp
 import com.transporter.streetglide.ui.exception.ErrorMessageFactory
 import com.transporter.streetglide.ui.helpers.Helper.Companion.isThereInternetConnection
 import com.transporter.streetglide.ui.helpers.Helper.Companion.showSnackBar
 import com.transporter.streetglide.ui.nocurrentsheet.NoCurrentSheetActivity
 import com.transporter.streetglide.ui.scanvalidation.StartValidationActivity
+import org.koin.android.ext.android.inject
 import java.util.*
 
 class LoginFragment : Fragment(), LoginContract.View {
 
-    private lateinit var loginPresenter: LoginContract.Presenter
+    private val loginPresenter: LoginContract.Presenter by inject()
     private lateinit var progressDialog: SweetAlertDialog
     private lateinit var loginConstraint: View
     private lateinit var loginView: View
@@ -38,7 +31,7 @@ class LoginFragment : Fragment(), LoginContract.View {
         // Inflate the layout for this fragment
         loginView = inflater.inflate(R.layout.fragment_login, container, false)
         initView()
-        initPresenter()
+//        initPresenter()
         loginPresenter.setView(this)
         return loginView
     }
@@ -55,19 +48,19 @@ class LoginFragment : Fragment(), LoginContract.View {
         }
     }
 
-    private fun initPresenter() {
-        //FIXME: Create instance of presenter
-        val daoSession = (requireContext().applicationContext as StreetglideApp).getDaoSession()
-        val superGlideRestService = (requireContext().applicationContext as StreetglideApp).getServiceInstance()
-        val configurationRepository = (requireContext().applicationContext as StreetglideApp).getConfigRepoInstance()
-        val sheetDiskRepo = SheetDiskRepository(daoSession.daoSheetDao, daoSession.daoShipmentDao, configurationRepository)
-        val sheetSuperGlideRepository = SheetSuperGlideRepository(superGlideRestService, configurationRepository)
-        val tokenSuperGlideRepository = TokenSuperGlideRepository(superGlideRestService)
-        val loginService = LoginService(tokenSuperGlideRepository, configurationRepository)
-        val requestSheetService = RequestSheetService(sheetSuperGlideRepository, sheetDiskRepo, configurationRepository)
-        val getRunnerIdService = GetRunnerIdService(UserSuperGlideRepository(superGlideRestService, configurationRepository), configurationRepository)
-        loginPresenter = LoginPresenter(loginService, requestSheetService, getRunnerIdService)
-    }
+//    private fun initPresenter() {
+//        //FIXME: Create instance of presenter
+//        val daoSession = (requireContext().applicationContext as StreetglideApp).getDaoSession()
+//        val superGlideRestService = (requireContext().applicationContext as StreetglideApp).getServiceInstance()
+//        val configurationRepository = (requireContext().applicationContext as StreetglideApp).getConfigRepoInstance()
+//        val sheetDiskRepo = SheetDiskRepository(daoSession.daoSheetDao, daoSession.daoShipmentDao, configurationRepository)
+//        val sheetSuperGlideRepository = SheetSuperGlideRepository(superGlideRestService, configurationRepository)
+//        val tokenSuperGlideRepository = TokenSuperGlideRepository(superGlideRestService)
+//        val loginService = LoginService(tokenSuperGlideRepository, configurationRepository)
+//        val requestSheetService = RequestSheetService(sheetSuperGlideRepository, sheetDiskRepo, configurationRepository)
+//        val getRunnerIdService = GetRunnerIdService(UserSuperGlideRepository(superGlideRestService, configurationRepository), configurationRepository)
+//        loginPresenter = LoginPresenter(loginService, requestSheetService, getRunnerIdService)
+//    }
 
     override fun initView() {
         progressDialog = SweetAlertDialog(context, SweetAlertDialog.PROGRESS_TYPE)

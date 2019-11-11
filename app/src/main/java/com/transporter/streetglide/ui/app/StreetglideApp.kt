@@ -7,7 +7,9 @@ import com.transporter.streetglide.infrastructure.SuperGlideRestService
 import com.transporter.streetglide.infrastructure.SuperGlideRestServiceFactory
 import com.transporter.streetglide.infrastructure.dao.DaoMaster
 import com.transporter.streetglide.infrastructure.dao.DaoSession
+import com.transporter.streetglide.ui.di.applicationModule
 import com.transporter.streetglide.ui.util.ProductionDbOpenHelper
+import org.koin.android.ext.android.startKoin
 
 
 private const val BASE_URL = "https://172.17.8.102/api/v1/"
@@ -20,6 +22,7 @@ class StreetglideApp : Application() {
         setupGreenDao()
         getConfigRepoInstance()
         getServiceInstance()
+        startKoin(this, listOf(applicationModule))
     }
 
     private fun setupGreenDao() {
