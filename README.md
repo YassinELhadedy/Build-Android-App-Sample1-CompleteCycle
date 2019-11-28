@@ -8,6 +8,7 @@ Prerequisites for android studio:
 1- Recycler View.
 2- Retrofit.
 3- Cucumber.
+4- Koin DI
 
 # User Stories
 The following required functionality is completed:
