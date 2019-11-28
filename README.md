@@ -9,6 +9,12 @@ Prerequisites for android studio:
 2- Retrofit.
 3- Cucumber.
 4- Koin DI
+5- Mockito Junit
+6- Esspresso UI Test
+7- Robolectric unit test
+8- RX Android 
+9- Parametrized unit test
+10- GreenDao ORM DB 
 
 # User Stories
 The following required functionality is completed:
