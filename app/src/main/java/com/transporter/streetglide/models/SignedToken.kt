@@ -3,7 +3,6 @@ package com.transporter.streetglide.models
 import com.auth0.android.jwt.JWT
 
 /**
- * Created by mcherri on 11/29/17.
  * SignedToken
  */
 data class SignedToken(val token: String) {

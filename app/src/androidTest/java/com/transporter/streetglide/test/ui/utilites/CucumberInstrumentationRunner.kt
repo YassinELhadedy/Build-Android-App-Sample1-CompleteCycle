@@ -5,9 +5,6 @@ import android.support.test.runner.AndroidJUnitRunner
 
 import cucumber.api.android.CucumberInstrumentationCore
 
-
-
-
 class CucumberInstrumentationRunner : AndroidJUnitRunner() {
 
     private val instrumentationCore = CucumberInstrumentationCore(this)

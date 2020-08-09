@@ -21,8 +21,6 @@ import java.math.BigDecimal
 import java.util.*
 import java.util.concurrent.TimeUnit
 
-
-
 @Config
 @RunWith(ParameterizedRobolectricTestRunner::class)
 class ValidationServiceUnitTest(private val setupTestParameter: SetupTestParameter) {

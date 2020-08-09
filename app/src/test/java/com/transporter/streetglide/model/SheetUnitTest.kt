@@ -9,8 +9,6 @@ import org.robolectric.annotation.Config
 import java.math.BigDecimal
 import java.util.*
 
-
-
 @Config
 @RunWith(ParameterizedRobolectricTestRunner::class)
 class SheetUnitTest(private val setupTestParameter: SetupTestParameter) {
