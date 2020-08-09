@@ -33,13 +33,13 @@ private const val DATA_ERROR = "Unsupported field"
 
 @Config
 @RunWith(ParameterizedRobolectricTestRunner::class)
-class GetAllRepositoryUnitTest(private val setupTestParameter: GetAllRepositoryUnitTest.SetupTestParameter<*>) {
+class GetAllRepositoryUnitTest(private val setupTestParameter: SetupTestParameter<*>) {
     companion object {
         @JvmStatic
         @ParameterizedRobolectricTestRunner.Parameters(name = "{index}: {0}")
         fun data(): List<Array<*>> = listOf(
-                arrayOf(object : GetAllRepositoryUnitTest.SetupTestParameter<Sheet> {
-                    override fun setup(): GetAllRepositoryUnitTest.TestParameter<Sheet> {
+                arrayOf(object : SetupTestParameter<Sheet> {
+                    override fun setup(): TestParameter<Sheet> {
                         val openHelper = DaoMaster.DevOpenHelper(RuntimeEnvironment.application, null)
                         val daoSession = DaoMaster(openHelper.writableDb).newSession()
                         val sharedPreference: SharedPreferences = RuntimeEnvironment.application.getSharedPreferences(null, Context.MODE_PRIVATE)
@@ -160,7 +160,7 @@ class GetAllRepositoryUnitTest(private val setupTestParameter: GetAllRepositoryU
 
                         )
 
-                        return object : GetAllRepositoryUnitTest.TestParameter<Sheet> {
+                        return object : TestParameter<Sheet> {
                             override fun getNormalPaginations(): Set<Pagination> =
                                     paginationMap.keys
 
@@ -184,8 +184,8 @@ class GetAllRepositoryUnitTest(private val setupTestParameter: GetAllRepositoryU
                     override fun toString(): String =
                             SheetDiskRepository::class.java.simpleName
                 }),
-                arrayOf(object : GetAllRepositoryUnitTest.SetupTestParameter<Sheet> {
-                    override fun setup(): GetAllRepositoryUnitTest.TestParameter<Sheet> {
+                arrayOf(object : SetupTestParameter<Sheet> {
+                    override fun setup(): TestParameter<Sheet> {
                         // Remove the milli-second part as it is not supported by Superglide
                         val datetime = Date(Date().time / 1000 * 1000)
                         val sheets = listOf(
@@ -203,7 +203,7 @@ class GetAllRepositoryUnitTest(private val setupTestParameter: GetAllRepositoryU
                         val faultyPaginationMap = hashMapOf<Pagination, Throwable>(Pagination(expr, sort, 0, 2) to RuntimeException(DATA_ERROR),
                                 Pagination(expr, sort, 0, 0) to RuntimeException(DATA_ERROR))
 
-                        return object : GetAllRepositoryUnitTest.TestParameter<Sheet> {
+                        return object : TestParameter<Sheet> {
                             override fun getNormalPaginations(): Set<Pagination> =
                                     paginationMap.keys
 
@@ -262,8 +262,8 @@ class GetAllRepositoryUnitTest(private val setupTestParameter: GetAllRepositoryU
                     override fun toString(): String =
                             SheetSuperGlideRepository::class.java.simpleName
                 }),
-                arrayOf(object : GetAllRepositoryUnitTest.SetupTestParameter<ScannedBarcode> {
-                    override fun setup(): GetAllRepositoryUnitTest.TestParameter<ScannedBarcode> {
+                arrayOf(object : SetupTestParameter<ScannedBarcode> {
+                    override fun setup(): TestParameter<ScannedBarcode> {
                         val openHelper = DaoMaster.DevOpenHelper(RuntimeEnvironment.application, null)
                         val daoSession = DaoMaster(openHelper.writableDb).newSession()
                         val scannedBarcodeRepository = ScannedBarcodeRepositoryImp(daoSession.daoScannedBarcodeDao)
@@ -331,7 +331,7 @@ class GetAllRepositoryUnitTest(private val setupTestParameter: GetAllRepositoryU
                                 Pagination(expr17) to IllegalArgumentException(UNSUPPORTED_CONSTANT)
                         )
 
-                        return object : GetAllRepositoryUnitTest.TestParameter<ScannedBarcode> {
+                        return object : TestParameter<ScannedBarcode> {
                             override fun getNormalPaginations(): Set<Pagination> =
                                     paginationMap.keys
 
@@ -362,7 +362,7 @@ class GetAllRepositoryUnitTest(private val setupTestParameter: GetAllRepositoryU
 
         val testObserver = TestObserver<Triple<List<Any?>, Pagination, List<Any?>>>()
         Observable.fromIterable(testParameter.getNormalPaginations()
-                .map {
+                .map { it ->
                     val triple = testParameter.getAllWithNormalPagination(it)
                     triple.first.map { Triple(it, triple.second, triple.third) }
                 })
@@ -380,10 +380,9 @@ class GetAllRepositoryUnitTest(private val setupTestParameter: GetAllRepositoryU
     }
 
     @Test
-    @Config(shadows = [(GetAllRepositoryUnitTest.ShadowSQLiteDatabase::class)])
+    @Config(shadows = [(ShadowSQLiteDatabase::class)])
     fun testGetAllWithFaultyPaginationFromRepository() {
         val testParameter = setupTestParameter.setup()
-
         val testObserver = TestObserver<Triple<Notification<out List<Any?>>, Pagination, Throwable>>()
         Observable.fromIterable(testParameter.getFaultyPaginations()
                 .map {
